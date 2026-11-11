@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto dan Video pada Halaman Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #000;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        img, video, iframe {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Judul Halaman -->
+    <h1>Foto dan Video pada Halaman Web</h1>
+    <p>Pada halaman ini kita akan belajar menampilkan foto dan video menggunakan HTML.</p>
+    <hr>
+
+    <!-- 1. Menampilkan Foto -->
+    <h3>1.Menampilkan Foto</h3>
+    <p>Foto pada halaman web dapat menggunakan tag &lt;img&gt;</p>
+    <img src="../images/img455.jpg" alt="Menampilkan Foto" width="300">
+
+    <!-- 2. Foto dengan Ukuran -->
+    <h3>2. Foto dengan Ukuran</h3>
+    <p>Ukuran pada foto dapat diatur dengan atribut width dan height</p>
+    <img src="../images/img455.jpg" alt="Foto dengan Ukuran" width="300" height="250">
+
+    <!-- 3. Foto dengan Link -->
+    <h3>3. Foto dengan Link</h3>
+    <p>Foto juga dapat digabungkan dengan tag link, silahkan klik foto berikut.</p>
+    <a href="https://www.gardaoto.com/blog/mengenal-mobil-bmw-beserta-jenis-dan-spesifikasinya/" target="_blank">
+        <img src="../images/img455.jpg" alt="Foto dengan Link" width="150">
+    </a>
+
+    <!-- 4. Video -->
+    <h3>4.Video</h3>
+    <p>Video dapat ditampilkan menggunakan tag &lt;video&gt;</p>
+    <video width="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+
+    <!-- 5. Video Autoplay -->
+    <h3>5. Video Autoplay</h3>
+    <video width="360" autoplay muted controls>
+        <source src="video.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+
+    <!-- 6. Video YouTube -->
+    <h3>6. Video YouTube</h3>
+    <iframe width="420" height="250" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>

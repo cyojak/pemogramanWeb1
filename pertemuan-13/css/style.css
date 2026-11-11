@@ -1,0 +1,248 @@
+/* ===== Reset & Variabel ===== */
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --accent: #ec4899;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --card: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+    color: var(--text);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ec4899 100%);
+    background-attachment: fixed;
+}
+
+/* ===== Judul Halaman ===== */
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Kartu Aplikasi ===== */
+.container {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    padding: 32px 28px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: muncul 0.6s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary-dark);
+}
+
+/* ===== Form ===== */
+/* <br> di HTML disembunyikan agar jarak diatur oleh CSS */
+.container br {
+    display: none;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+input::placeholder {
+    color: #b0b5bf;
+}
+
+/* ===== Tombol ===== */
+button {
+    width: 100%;
+    padding: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    opacity: 0.9;
+}
+
+/* ===== Area Hasil ===== */
+#hasil {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: #f5f3ff;
+    border-left: 5px solid var(--primary);
+    line-height: 1.7;
+    font-size: 0.98rem;
+    animation: muncul 0.4s ease;
+}
+
+/* sembunyikan kotak hasil selama masih kosong */
+#hasil:empty {
+    display: none;
+}
+
+#hasil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+#hasil:empty {
+    display: none;
+}
+
+#hasil .ikon {
+    font-size: 2rem;
+    display: inline-block;
+}
+
+/* ---- LULUS: hijau, membesar (pop) + ikon memantul ---- */
+#hasil.lulus {
+    background: #ecfdf5;
+    border-left-color: #10b981;
+    color: #047857;
+    animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#hasil.lulus .ikon {
+    animation: lompat 0.8s ease infinite;
+}
+
+/* ---- TIDAK LULUS: merah, bergetar + ikon bergoyang ---- */
+#hasil.gagal {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+    color: #b91c1c;
+    animation: getar 0.6s ease;
+}
+
+#hasil.gagal .ikon {
+    animation: goyang 1.2s ease-in-out infinite;
+}
+
+/* ---- PERINGATAN: kuning, berkedip ---- */
+#hasil.peringatan {
+    background: #fffbeb;
+    border-left-color: #f59e0b;
+    color: #b45309;
+    animation: getar 0.5s ease;
+}
+
+@keyframes pop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes lompat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+@keyframes getar {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+
+@keyframes goyang {
+    0%, 100% { transform: rotate(-10deg); }
+    50%      { transform: rotate(10deg); }
+}
+
+/* ---- Confetti ---- */
+.confetti {
+    position: fixed;
+    top: -12px;
+    width: 10px;
+    height: 14px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 999;
+    animation: jatuh linear forwards;
+}
+
+@keyframes jatuh {
+    to {
+        transform: translateY(105vh) rotate(720deg);
+        opacity: 0.8;
+    }
+}
+
+#hasil strong,
+#hasil b {
+    color: var(--primary-dark);
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 24px 18px;
+    }
+}

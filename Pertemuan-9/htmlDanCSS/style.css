@@ -1,0 +1,155 @@
+/* Reset CSS Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #eaf1f8;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Biru Tua */
+.top-header {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Navigasi */
+.navbar {
+    background-color: #dbeafe;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #2b6cb0;
+}
+
+/* Container Utama */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 15px;
+}
+
+/* Card Kartu Profil */
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 30px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* Judul Utama */
+.main-title {
+    text-align: center;
+    color: #2b6cb0;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Avatar / Foto Profil */
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 4px solid #2b6cb0;
+    overflow: hidden;
+    background-color: #e2e8f0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nama & Subtitle */
+.user-name {
+    text-align: center;
+    color: #2b6cb0;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.user-sub {
+    text-align: center;
+    color: #718096;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0;
+    border-top: 1px solid #cbd5e0;
+    margin-bottom: 15px;
+}
+
+/* Banner Judul Seksi */
+.section-title {
+    background-color: #dbeafe;
+    color: #1a365d;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+/* Isi Seksi Data */
+.data-content {
+    font-size: 13.5px;
+    color: #2d3748;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.list-content ul {
+    padding-left: 20px;
+}
+
+.list-content li {
+    margin-bottom: 3px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+}

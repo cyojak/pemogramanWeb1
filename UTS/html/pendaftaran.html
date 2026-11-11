@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran - Informasi Perpustakaan Digital Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">📚 Perpustakaan Digital</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pustakawan.html">Pustakawan</a></li>
+        <li><a href="jadwal.html">Jadwal</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="pendaftaran.html" class="aktif">Pendaftaran</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Pendaftaran Pelatihan Karier Mahasiswa</h1>
+
+    <form class="kartu" action="#" method="post">
+      <div class="baris">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+      </div>
+
+      <div class="baris">
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+      </div>
+
+      <div class="baris">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+      </div>
+
+      <div class="baris">
+        <span class="label">Jenis Kelamin</span>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+          <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+        </div>
+      </div>
+
+      <div class="baris">
+        <label for="pelatihan">Pilihan Pelatihan</label>
+        <select id="pelatihan" name="pelatihan" required>
+          <option value="">-- Pilih pelatihan --</option>
+          <option>Pelatihan Pencarian Referensi</option>
+          <option>Workshop Sitasi dan Daftar Pustaka</option>
+          <option>Diskusi Literasi Informasi</option>
+        </select>
+      </div>
+
+      <div class="baris">
+        <label for="semester">Semester</label>
+        <select id="semester" name="semester" required>
+          <option value="">-- Pilih semester --</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option>
+        </select>
+      </div>
+
+      <div class="baris">
+        <label for="alasan">Alasan Mengikuti</label>
+        <textarea id="alasan" name="alasan" placeholder="Tuliskan alasan Anda mengikuti pelatihan" required></textarea>
+      </div>
+
+      <button type="submit">Daftar</button>
+    </form>
+  </main>
+
+  <footer>&copy; 2026 Perpustakaan Universitas &mdash; Informasi Perpustakaan Digital Mahasiswa</footer>
+
+</body>
+</html>
