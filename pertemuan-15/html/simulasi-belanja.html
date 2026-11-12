@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Perhitungan Belanja</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>SIMULASI PERHITUNGAN BELANJA</h1>
+
+  <label for="nama">Nama Pembeli:</label><br>
+  <input type="text" id="nama"><br><br>
+
+  <label for="total">Total Belanja (Rp):</label><br>
+  <input type="number" id="total" min="0"><br><br>
+
+  <button onclick="hitungTotal()">Hitung Total</button>
+
+  <h3>Hasil Perhitungan</h3>
+  <div id="hasil"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
